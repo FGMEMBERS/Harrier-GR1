@@ -4,15 +4,47 @@
 
 	<path>Cockpit.ac</path>
 	
+    <!-- Rembrandt auto switching for glass -->
+	
+    <effect>
+        <inherits-from>Effects/model-transparent</inherits-from>
+        <condition>
+            <greater-than>
+                <property>sim/multiplay/generic/float[6]</property>
+                <value>9</value>
+            </greater-than>
+            <property>/sim/rendering/rembrandt/enabled</property>
+        	</condition>
+			<object-name>HUDGlass</object-name>
+    </effect>
+	
+	<!-- Shaders -->
+	
+	<animation>
+		<type>shader</type>
+		<shader>chrome</shader>
+		<texture>Aircraft/Generic/Effects/glass_shader.png</texture>
+		<object-name>HUDGlass</object-name>
+	</animation>
+
+	<animation>
+		<type>noshadow</type>
+		<object-name>HUDGlass</object-name>
+	</animation>
+	
+	<!-- Models -->
+	
 	<model>
 		<path>Aircraft/Harrier-GR1/Panel/Panel.xml</path>
 	</model>
 
 	<model>
+		<object-name>Seat</object-name>
 		<path>Aircraft/Harrier-GR1/Models/Cockpit/Seat.xml</path>
 	</model>
 
 	<model>
+		<object-name>Pilot</object-name>
 		<path>Aircraft/Harrier-GR1/Models/Pilot/Pilot.xml</path>
 		<offsets>
 			<x-m>-15.3</x-m>

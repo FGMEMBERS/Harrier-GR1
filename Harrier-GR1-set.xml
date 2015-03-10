@@ -7,7 +7,7 @@
 		<!-- Info -->
 		<description>Hawker Siddeley Harrier GR.1</description>
 		<author>Petar Jedvaj, Andy Ross, Gary Brown, StuartC, Raptor and Brendan Black</author>
-		<status>3.0.4</status>
+		<status>3.0.9</status>
 		<rating>
 			<FDM type="int">4</FDM>
 			<systems type="int">1</systems>
@@ -177,11 +177,15 @@
 				<desc>HUD</desc>
 			</key>
 			<key>
+				<name>e</name>
+				<desc>Eject</desc>
+			</key>
+			<key>
 				<name>f</name>
 				<desc>Gun</desc>
 			</key>
 			<key>
-				<name>e</name>
+				<name>d</name>
 				<desc>Rockets</desc>
 			</key>
 
@@ -336,8 +340,8 @@
 				</binding>
 			</key>
 			
-			<key n="101">
-				<name>e</name>
+			<key n="100">
+				<name>d</name>
 				<desc>Fire rockets</desc>
 				<binding>
 					<command>nasal</command>
@@ -349,6 +353,15 @@
 						<script>guns.stop_Rocket()</script>
 					</binding>
 				</mod-up>
+			</key>
+			
+			<key n="101">
+				<name>e</name>
+				<desc>Eject</desc>
+				<binding>
+					<command>nasal</command>
+					<script>Eject.eject();</script>
+				</binding>
 			</key>
 
 			<key n="102">
@@ -448,18 +461,15 @@
 			<selected type="int">3</selected>
 		</enav>
 		
-	 	<efis>
+		<efis>
 			<ecam>
-					<display-mode type="string">FUEL</display-mode>
+				<display-mode type="string">FUEL</display-mode>
 			</ecam>
-			
 			<nd>
-					<display-mode type="string">VOR</display-mode>
-					<display-mode-knob type="int">2</display-mode-knob>
-					<display-range type="int">40</display-range>
-				
+				<display-mode type="string">VOR</display-mode>
+				<display-mode-knob type="int">2</display-mode-knob>
+				<display-range type="int">40</display-range>
 			</nd>
-			
 			<input>
 				<vor-adf-1 type="int">1</vor-adf-1>
 				<vor-adf-2 type="int">1</vor-adf-2>
@@ -474,6 +484,7 @@
 				<taxi type="bool">1</taxi>
 			</input>
 		</efis>
+
 	</instrumentation>
 
 	<!-- Nasal Scripts -->
@@ -482,8 +493,11 @@
 			<file>Aircraft/Harrier-GR1/Nasal/Controls.nas</file>
 			<file>Aircraft/Harrier-GR1/Nasal/Liveries.nas</file>
 			<file>Aircraft/Harrier-GR1/Nasal/HUD.nas</file>
-			<file>Aircraft/Harrier-GR1/Nasal/Lights.nas</file>
 		</Harrier-GR1>
+		
+	    <lights>
+	    	<file>Aircraft/Harrier-GR1/Nasal/Lights.nas</file>
+	    </lights>
 		
 		<ENAV>
 			<file>Aircraft/Harrier-GR1/Nasal/ENAV.nas</file>
@@ -492,6 +506,10 @@
 		<Canopy>
 			<file>Aircraft/Harrier-GR1/Nasal/Canopy.nas</file>
 		</Canopy>
+		
+		<Eject>
+			<file>Aircraft/Harrier-GR1/Nasal/eject.nas</file>
+		</Eject>
 		
 		<Low>
 			<file>Aircraft/Harrier-GR1/Nasal/Low.nas</file>
