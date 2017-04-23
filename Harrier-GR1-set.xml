@@ -6,6 +6,22 @@
 
 		<!-- Info -->
 		<description>Hawker Siddeley Harrier GR.1</description>
+    <long-description>The Hawker Siddeley Harrier, developed in the 1960s, was the
+			first of the Harrier Jump Jet series of aircraft. It was the first
+			operational close-support and reconnaissance fighter aircraft with
+			vertical/short takeoff and landing (V/STOL) capabilities and the only
+			truly successful V/STOL design of the many that arose in that era.</long-description>
+    <tags>
+        <tag>fighter</tag>
+        <tag>1960s</tag>
+        <tag>1970s</tag>
+        <tag>high-wing</tag>
+        <tag>retractable-gear</tag>
+        <tag>stol</tag>
+        <tag>vtol</tag>
+        <tag>jet</tag>
+        <tag>single-engine</tag>
+    </tags>
 		<author>Petar Jedvaj, Andy Ross, Gary Brown, StuartC, Raptor and Brendan Black</author>
 		<status>3.0.4</status>
 		<rating>
@@ -74,42 +90,42 @@
 		<view n="1">
 			<config>
 				<target-z-offset-m archive="y">8</target-z-offset-m>
-				<pitch-offset-deg archive="y">10</pitch-offset-deg>     
+				<pitch-offset-deg archive="y">10</pitch-offset-deg>
 			</config>
 		</view>
 
 		<view n="2">
 			<config>
 				<target-z-offset-m archive="y">8</target-z-offset-m>
-				<pitch-offset-deg archive="y">10</pitch-offset-deg>     
+				<pitch-offset-deg archive="y">10</pitch-offset-deg>
 			</config>
 		</view>
 
 		<view n="3">
 			<config>
 				<target-z-offset-m archive="y">8</target-z-offset-m>
-				<pitch-offset-deg archive="y">10</pitch-offset-deg>     
+				<pitch-offset-deg archive="y">10</pitch-offset-deg>
 			</config>
 		</view>
 
 		<view n="4">
 			<config>
 				<target-z-offset-m archive="y">8</target-z-offset-m>
-				<pitch-offset-deg archive="y">10</pitch-offset-deg>     
+				<pitch-offset-deg archive="y">10</pitch-offset-deg>
 			</config>
 		</view>
 
 		<view n="5">
 			<config>
 				<target-z-offset-m archive="y">8</target-z-offset-m>
-				<pitch-offset-deg archive="y">10</pitch-offset-deg>     
+				<pitch-offset-deg archive="y">10</pitch-offset-deg>
 			</config>
 		</view>
 
 		<view n="6">
 			<config>
 				<target-z-offset-m archive="y">8</target-z-offset-m>
-				<pitch-offset-deg archive="y">10</pitch-offset-deg>     
+				<pitch-offset-deg archive="y">10</pitch-offset-deg>
 			</config>
 		</view>
 
@@ -320,11 +336,11 @@
 			</tank>
 		</fuel>
 	</consumables>
-	
-	
+
+
 
 	<!-- Keyboard Shortcuts -->
-	<input> 
+	<input>
 		<keyboard>
 
 			<key n="99">
@@ -335,7 +351,7 @@
 					<script>Canopy.canopy_switch(2)</script>
 				</binding>
 			</key>
-			
+
 			<key n="101">
 				<name>e</name>
 				<desc>Fire rockets</desc>
@@ -367,7 +383,7 @@
 					</binding>
 				</mod-up>
 			</key>
-			
+
 			<key n="104">
 				<name>h</name>
 				<desc>Toggle HUD</desc>
@@ -376,7 +392,7 @@
 					<property>sim/hud/visibility[1]</property>
 				</binding>
 			</key>
-  
+
 			<key n="113">
 				<name>q</name>
 				<desc>Deploy countermeasures</desc>
@@ -414,7 +430,7 @@
 			<tailwheel-lock>false</tailwheel-lock>
 			<brake-parking>1</brake-parking>
 		</gear>
-		
+
 		<armament>
 			<trigger>0</trigger>
 			<trigger1>0</trigger1>
@@ -447,19 +463,19 @@
 		<enav>
 			<selected type="int">3</selected>
 		</enav>
-		
+
 	 	<efis>
 			<ecam>
 					<display-mode type="string">FUEL</display-mode>
 			</ecam>
-			
+
 			<nd>
 					<display-mode type="string">VOR</display-mode>
 					<display-mode-knob type="int">2</display-mode-knob>
 					<display-range type="int">40</display-range>
-				
+
 			</nd>
-			
+
 			<input>
 				<vor-adf-1 type="int">1</vor-adf-1>
 				<vor-adf-2 type="int">1</vor-adf-2>
@@ -484,27 +500,27 @@
 			<file>Aircraft/Harrier-GR1/Nasal/HUD.nas</file>
 			<file>Aircraft/Harrier-GR1/Nasal/Lights.nas</file>
 		</Harrier-GR1>
-		
+
 		<ENAV>
 			<file>Aircraft/Harrier-GR1/Nasal/ENAV.nas</file>
 		</ENAV>
-		
+
 		<Canopy>
 			<file>Aircraft/Harrier-GR1/Nasal/Canopy.nas</file>
 		</Canopy>
-		
+
 		<Low>
 			<file>Aircraft/Harrier-GR1/Nasal/Low.nas</file>
 		</Low>
-		
+
 		<terrain-map>
 			<file>Aircraft/Harrier-GR1/Nasal/terrain-map.nas</file>
 		</terrain-map>
-		
+
 		<guns>
 			<file>Aircraft/Harrier-GR1/Nasal/weapons.nas</file>
 		</guns>
-		
+
 		<engines>
 			<file>Aircraft/Harrier-GR1/Nasal/generic-yasim-engine.nas</file>
 			<script>
