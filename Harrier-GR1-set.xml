@@ -42,6 +42,7 @@
 		<!-- Models -->
 		<model>
 			<path>Aircraft/Harrier-GR1/Models/Harrier-GR1.xml</path>
+			<fallback-model-index type="int">502</fallback-model-index>
 		</model>
 
 		<submodels>
